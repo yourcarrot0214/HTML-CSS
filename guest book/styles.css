@@ -114,6 +114,11 @@ body {
   font-weight: bold;
 }
 
+.profile-follow-button.follow {
+  background-color: orangered;
+  color: #eaeafa;
+}
+
 /* feed */
 
 .feed {
@@ -187,10 +192,8 @@ body {
   margin-right: 15px;
 }
 
-.card-footer-reply:hover,
-.card-footer-like:hover {
-  font-weight: normal;
-  cursor: pointer;
+.card-footer-like.liked {
+  color: orangered;
 }
 
 /* reply */
@@ -286,13 +289,17 @@ body {
 
 @media (min-width: 1024px) {
   body {
+    /* position: static; */
+  }
+  .main-container {
+    display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    padding: 0 20px;
   }
   .profile {
     max-width: 390px;
     margin-right: 50px;
+    height: 100%;
   }
 
   .feed {

@@ -23,131 +23,134 @@
     <title>Guest Book</title>
   </head>
   <body>
-    <div class="profile">
-      <div class="profile-header">
-        <div class="profile-header-image">
-          <img src="./images/IMG_4013.JPG" alt="header-image" />
-        </div>
-        <div class="profile-name">ByungHoon Jeong</div>
-        <div class="profile-subtitle">White Hand</div>
-      </div>
-      <div class="profile-info">
-        <div class="posts">
-          <p class="number">753</p>
-          <p class="subtitle">Posts</p>
-        </div>
-        <div class="following">
-          <p class="number">1,536</p>
-          <p class="subtitle">Following</p>
-        </div>
-        <div class="followers">
-          <p class="number">899</p>
-          <p class="subtitle">Followers</p>
-        </div>
-      </div>
-      <div class="profile-description">
-        <p>
-          개인사업 2년 10개월(온라인 유통) / 건설현장 소방배관사 2년 / 이후 웹
-          개발자로 전직하기 위해 개발 공부중입니다. JS기반 풀스택 개발자를 1차적
-          목표로 하고 있으며 이후 변화와 확장에 열려있는 사람이 되고 싶습니다.
-        </p>
-      </div>
-      <div class="profile-footer">
-        <button class="profile-follow-button">Follow</button>
-      </div>
-    </div>
-    <div class="feed">
-      <div class="feed-card">
-        <div class="profile-image">
-          <img src="./images/profile-image-man1.jpg" alt="profile Image" />
-        </div>
-        <div class="feed-content">
-          <div class="card-header">
-            <div class="card-header-title">Type something</div>
-            <div class="card-header-time">a few seconds ago</div>
+    <div class="main-container">
+      <div class="profile">
+        <div class="profile-header">
+          <div class="profile-header-image">
+            <img src="./images/IMG_4013.JPG" alt="header-image" />
           </div>
-          <div class="card-body">
-            <div class="card-body-content">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
-              dolorum ullam natus minima consectetur, exercitationem repellat
-              unde tempora, totam rem cumque qui id eum autem sapiente quos,
-              molestiae at ex.
+          <div class="profile-name">ByungHoon Jeong</div>
+          <div class="profile-subtitle">White Hand</div>
+        </div>
+        <div class="profile-info">
+          <div class="posts">
+            <p class="number">753</p>
+            <p class="subtitle">Posts</p>
+          </div>
+          <div class="following">
+            <p class="number">1,536</p>
+            <p class="subtitle">Following</p>
+          </div>
+          <div class="followers">
+            <p class="number">899</p>
+            <p class="subtitle">Followers</p>
+          </div>
+        </div>
+        <div class="profile-description">
+          <p>
+            개인사업 2년 10개월(온라인 유통) / 건설현장 소방배관사 2년 / 이후 웹
+            개발자로 전직하기 위해 개발 공부중입니다. JS기반 풀스택 개발자를
+            1차적 목표로 하고 있으며 이후 변화와 확장에 열려있는 사람이 되고
+            싶습니다.
+          </p>
+        </div>
+        <div class="profile-footer">
+          <button class="profile-follow-button">Follow</button>
+        </div>
+      </div>
+      <div class="feed">
+        <div class="feed-card">
+          <div class="profile-image">
+            <img src="./images/profile-image-man1.jpg" alt="profile Image" />
+          </div>
+          <div class="feed-content">
+            <div class="card-header">
+              <div class="card-header-title">Type something</div>
+              <div class="card-header-time">a few seconds ago</div>
+            </div>
+            <div class="card-body">
+              <div class="card-body-content">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
+                dolorum ullam natus minima consectetur, exercitationem repellat
+                unde tempora, totam rem cumque qui id eum autem sapiente quos,
+                molestiae at ex.
+              </div>
+            </div>
+            <div class="card-footer">
+              <span class="card-footer-reply">Reply</span>
+              <span class="card-footer-like">Like</span>
             </div>
           </div>
-          <div class="card-footer">
-            <span class="card-footer-reply">Reply</span>
-            <span class="card-footer-like">Like</span>
+        </div>
+
+        <!-- end of feed -->
+
+        <!-- reply -->
+
+        <div class="reply">
+          <div class="reply-icon">
+            <i class="fab fa-replyd"></i>
           </div>
-        </div>
-      </div>
-
-      <!-- end of feed -->
-
-      <!-- reply -->
-
-      <div class="reply">
-        <div class="reply-icon">
-          <i class="fab fa-replyd"></i>
-        </div>
-        <div class="reply-card">
-          <div class="reply-content">
-            <div class="reply-header">
-              <div class="reply-header-title">The Wilted Carrot Field</div>
-              <div class="reply-header-time">a few seconds ago</div>
-            </div>
-            <div class="reply-body">
-              <div class="reply-body-content">
-                The Carrot Field is wilted.
+          <div class="reply-card">
+            <div class="reply-content">
+              <div class="reply-header">
+                <div class="reply-header-title">The Wilted Carrot Field</div>
+                <div class="reply-header-time">a few seconds ago</div>
+              </div>
+              <div class="reply-body">
+                <div class="reply-body-content">
+                  The Carrot Field is wilted.
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- end of reply -->
-      <div class="feed-card">
-        <div class="profile-image">
-          <img src="./images/profile-image-woman1.jpg" alt="profile Image" />
-        </div>
-        <div class="feed-content">
-          <div class="card-header">
-            <div class="card-header-title">Like beer?</div>
-            <div class="card-header-time">a few minute ago</div>
+        <!-- end of reply -->
+        <div class="feed-card">
+          <div class="profile-image">
+            <img src="./images/profile-image-woman1.jpg" alt="profile Image" />
           </div>
-          <div class="card-body">
-            <div class="card-body-content">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita
-              cupiditate, eos molestias explicabo odio, ullam porro alias
-              aspernatur dolor architecto quia blanditiis consectetur? Ullam
-              odio nemo soluta vitae, provident dolores.
+          <div class="feed-content">
+            <div class="card-header">
+              <div class="card-header-title">Like beer?</div>
+              <div class="card-header-time">a few minute ago</div>
+            </div>
+            <div class="card-body">
+              <div class="card-body-content">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Expedita cupiditate, eos molestias explicabo odio, ullam porro
+                alias aspernatur dolor architecto quia blanditiis consectetur?
+                Ullam odio nemo soluta vitae, provident dolores.
+              </div>
+            </div>
+            <div class="card-footer">
+              <span class="card-footer-reply">Reply</span>
+              <span class="card-footer-like">Like</span>
             </div>
           </div>
-          <div class="card-footer">
-            <span class="card-footer-reply">Reply</span>
-            <span class="card-footer-like">Like</span>
-          </div>
         </div>
-      </div>
-      <div class="feed-card">
-        <div class="profile-image">
-          <img src="./images/profile-image-man2.jpg" alt="profile Image" />
-        </div>
-        <div class="feed-content">
-          <div class="card-header">
-            <div class="card-header-title">Stay hungry, Stay foolish</div>
-            <div class="card-header-time">a 3 hours ago</div>
+        <div class="feed-card">
+          <div class="profile-image">
+            <img src="./images/profile-image-man2.jpg" alt="profile Image" />
           </div>
-          <div class="card-body">
-            <div class="card-body-content">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
-              dolorum ullam natus minima consectetur, exercitationem repellat
-              unde tempora, totam rem cumque qui id eum autem sapiente quos,
-              molestiae at ex.
+          <div class="feed-content">
+            <div class="card-header">
+              <div class="card-header-title">Stay hungry, Stay foolish</div>
+              <div class="card-header-time">a 3 hours ago</div>
             </div>
-          </div>
-          <div class="card-footer">
-            <span class="card-footer-reply">Reply</span>
-            <span class="card-footer-like">Like</span>
+            <div class="card-body">
+              <div class="card-body-content">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
+                dolorum ullam natus minima consectetur, exercitationem repellat
+                unde tempora, totam rem cumque qui id eum autem sapiente quos,
+                molestiae at ex.
+              </div>
+            </div>
+            <div class="card-footer">
+              <span class="card-footer-reply">Reply</span>
+              <span class="card-footer-like">Like</span>
+            </div>
           </div>
         </div>
       </div>
