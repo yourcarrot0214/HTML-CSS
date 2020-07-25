@@ -25,3 +25,12 @@ likeButtons.forEach((button) => {
     event.target.classList.toggle("liked");
   });
 });
+
+// 3. feed display none
+
+const posts = document.querySelector(".posts");
+const feed = document.querySelector(".feed");
+
+posts.addEventListener("click", (event) => {
+  feed.classList.toggle("display-none");
+});

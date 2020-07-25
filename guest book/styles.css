@@ -132,6 +132,10 @@ body {
   max-width: 320px;
 }
 
+.display-none {
+  display: none;
+}
+
 .feed-card {
   display: flex;
   flex-direction: row;
@@ -192,6 +196,14 @@ body {
   margin-right: 15px;
 }
 
+.card-footer-reply:hover {
+  cursor: pointer;
+}
+
+.card-footer-like:hover {
+  cursor: pointer;
+}
+
 .card-footer-like.liked {
   color: orangered;
 }
@@ -239,6 +251,66 @@ body {
 
 .reply-body {
   padding: 10px 0;
+  color: #eaeafa;
+}
+
+/* following & following */
+
+.following-feed {
+  max-width: 320px;
+  background-color: #071933;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.following-feed.display-none {
+  display: none;
+}
+
+.following-feed-header {
+  margin: 20px 0;
+}
+
+.following-feed-header-title {
+  font-size: 20px;
+  color: #eaeafa;
+}
+
+.following-feed-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid orange;
+  border-radius: 10px;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+}
+
+.following-feed-card-image {
+  margin-right: 20px;
+}
+
+.following-feed-card-image img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: tomato;
+}
+
+.following-feed-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.following-feed-card-title {
+  font-size: 18px;
+  color: #eaeafa;
+}
+
+.following-feed-card-desc {
   color: #eaeafa;
 }
 
