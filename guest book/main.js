@@ -1,4 +1,4 @@
-// 1. profile Follow button 기능 구현
+// profile ::  Follow button 기능 구현
 
 const profileFollowButton = document.querySelector(".profile-follow-button");
 
@@ -11,7 +11,7 @@ profileFollowButton.addEventListener("click", (event) => {
   event.target.classList.toggle("follow");
 });
 
-// 2. feed :: like 기능 구현
+// feed :: like 기능 구현
 
 const likeButtons = document.querySelectorAll(".card-footer-like");
 
@@ -26,11 +26,24 @@ likeButtons.forEach((button) => {
   });
 });
 
-// 3. feed display none
+// feed :: display none
 
 const posts = document.querySelector(".posts");
-const feed = document.querySelector(".feed");
 
-posts.addEventListener("click", (event) => {
-  feed.classList.toggle("display-none");
+// form :: submit logic
+
+const form = document.querySelector("form");
+const formName = document.querySelector(".form-name");
+const formTextarea = document.querySelector(".form-textarea");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+  const name = formData.get("name");
+  const content = formData.get("content");
+  const postingData = { name, content };
+
+  console.log(postingData);
+  formName.value = "";
+  formTextarea.value = "";
 });
