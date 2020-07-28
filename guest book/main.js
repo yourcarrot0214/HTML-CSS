@@ -28,7 +28,35 @@ likeButtons.forEach((button) => {
 
 // feed :: display none
 
+const profileInfo = document.querySelector(".profile-info");
 const posts = document.querySelector(".posts");
+const following = document.querySelector(".following");
+const followers = document.querySelector(".followers");
+const feed = document.querySelector(".feed");
+const followingFeed = document.querySelector(".following-feed");
+const followersFeed = document.querySelector(".followers-feed");
+const formFeed = document.querySelector(".form-feed");
+
+profileInfo.addEventListener("click", (event) => {
+  console.log(event.target);
+
+  if (event.target === posts) {
+    feed.style.display = "flex";
+    formFeed.style.display = "none";
+    followingFeed.style.display = "none";
+    followersFeed.style.display = "none";
+  } else if (event.target === following) {
+    feed.style.display = "none";
+    formFeed.style.display = "none";
+    followingFeed.style.display = "flex";
+    followersFeed.style.display = "none";
+  } else if (event.target === followers) {
+    feed.style.display = "none";
+    formFeed.style.display = "none";
+    followingFeed.style.display = "none";
+    followersFeed.style.display = "flex";
+  }
+});
 
 // form :: submit logic
 

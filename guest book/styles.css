@@ -256,7 +256,8 @@ body {
 
 /* following & following */
 
-.following-feed {
+.following-feed,
+.followers-feed {
   max-width: 320px;
   background-color: #071933;
   border-radius: 10px;
@@ -266,20 +267,19 @@ body {
   margin: 20px 0;
 }
 
-.following-feed.display-none {
-  display: none;
-}
-
-.following-feed-header {
+.following-feed-header,
+.followers-feed-header {
   margin: 20px 0;
 }
 
-.following-feed-header-title {
+.following-feed-header-title,
+.followers-feed-header-title {
   font-size: 20px;
   color: #eaeafa;
 }
 
-.following-feed-card {
+.following-feed-card,
+.followers-feed-card {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -289,29 +289,34 @@ body {
   margin-bottom: 10px;
 }
 
-.following-feed-card-image {
+.following-feed-card-image,
+.followers-feed-card-image {
   margin-right: 20px;
 }
 
-.following-feed-card-image img {
+.following-feed-card-image img,
+.followers-feed-card-image img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: tomato;
 }
 
-.following-feed-card-body {
+.following-feed-card-body,
+.followers-feed-card-body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.following-feed-card-title {
+.following-feed-card-title,
+.followers-feed-card-title {
   font-size: 18px;
   color: #eaeafa;
 }
 
-.following-feed-card-desc {
+.following-feed-card-desc,
+.followers-feed-card-desc {
   color: #eaeafa;
 }
 
@@ -384,6 +389,10 @@ body {
     max-width: 460px;
   }
 
+  .followers-feed {
+    max-width: 460px;
+  }
+
   .form-feed {
     max-width: 460px;
   }
@@ -424,6 +433,11 @@ body {
     width: 100%;
   }
 
+  .followers-feed {
+    max-width: 740px;
+    width: 100%;
+  }
+
   .form-feed {
     max-width: 740px;
     width: 100%;
@@ -447,11 +461,17 @@ body {
 
   .feed,
   .following-feed,
+  .followers-feed,
   .form-feed {
     max-width: 500px;
+    width: 500px;
   }
 
   .following-feed {
+    display: none;
+  }
+
+  .followers-feed {
     display: none;
   }
 
