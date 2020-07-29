@@ -23,14 +23,33 @@ profileFollowButton.addEventListener("click", (event) => {
   event.target.classList.toggle("follow");
 });
 
-// feed :: like 기능 구현
+// feed :: feed 내 기능 구현
 
 feed.addEventListener("click", (event) => {
-  console.log(event.target.className);
+  // Like
   if (event.target.classList.contains("card-footer-like")) {
     event.target.classList.toggle("liked");
+  } else if (event.target.className === "fas fa-backspace") {
+    removeFeed(event);
+    removeFeedItem(event);
+    // storage update
   }
 });
+
+// feed :: remove Feed
+const removeFeed = (event) => {
+  event.target.parentElement.parentElement.parentElement.parentElement.remove();
+};
+
+// feedItems :: remove Item Filtering
+const removeFeedItem = (event) => {
+  let id = event.target.parentElement.parentElement.parentElement.id;
+  let name = event.target.parentElement.innerText;
+  let result = feedItems.filter(
+    (feed) => feed.id !== Number(id) && feed.name !== name
+  );
+  feedItems = result;
+};
 
 // feed :: display none
 
@@ -39,7 +58,7 @@ profileInfo.addEventListener("click", (event) => {
 
   if (event.target === posts) {
     feed.style.display = "flex";
-    formFeed.style.display = "none";
+    formFeed.style.display = "flex";
     followingFeed.style.display = "none";
     followersFeed.style.display = "none";
   } else if (event.target === following) {
@@ -66,6 +85,8 @@ form.addEventListener("submit", (event) => {
   const name = formData.get("name");
   const content = formData.get("content");
 
+  if (name === "" || content === "") return;
+
   const options = {
     year: "numeric",
     weekday: "long",
@@ -74,11 +95,8 @@ form.addEventListener("submit", (event) => {
   };
   const date = new Date().toLocaleDateString("ko-KR", options);
 
-  const postingData = { name, content, date };
-
-  console.log(postingData);
-
-  posting(postingData, id);
+  const postingData = { id, name, content, date };
+  posting(postingData);
   id++;
 
   // form 초기화
@@ -91,15 +109,18 @@ form.addEventListener("submit", (event) => {
 let feedItems = [];
 let id = 0;
 
-const posting = (data, id) => {
+const posting = (data) => {
   const post = `
     <div class="feed-card">
       <div class="profile-image">
         <i class="fas fa-user"></i>
       </div>
-      <div class="feed-content" id=${id}>
+      <div class="feed-content" id=${data.id}>
         <div class="card-header">
-          <div class="card-header-title">${data.name}</div>
+          <div class="card-header-title">
+            ${data.name}
+            <i class="fas fa-backspace"></i>
+            </div>
           <div class="card-header-time">${data.date}</div>
         </div>
         <div class="card-body">
@@ -113,7 +134,13 @@ const posting = (data, id) => {
     </div>
   `;
 
-  feed.insertAdjacentHTML("beforeend", post);
-  feedItems.push({ id: id, name: name, content: content });
+  feed.insertAdjacentHTML("afterbegin", post);
+  feedItems.push({
+    id: id,
+    name: data.name,
+    content: data.content,
+    date: data.date,
+  });
+  console.log(feedItems);
   // sotrage update
 };
