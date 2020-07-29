@@ -13,6 +13,8 @@ const formTextarea = document.querySelector(".form-textarea");
 
 const profileFollowButton = document.querySelector(".profile-follow-button");
 
+const POST_LS = "posts";
+
 // profile ::  Follow button 기능 구현
 profileFollowButton.addEventListener("click", (event) => {
   if (!event.target.classList.contains("follow")) {
@@ -49,6 +51,7 @@ const removeFeedItem = (event) => {
     (feed) => feed.id !== Number(id) && feed.name !== name
   );
   feedItems = result;
+  storageUpdate();
 };
 
 // feed :: display none
@@ -75,9 +78,6 @@ profileInfo.addEventListener("click", (event) => {
 });
 
 // form :: submit logic
-// 1. form에 입력된 데이터를 정의한다.
-// 2. 정의된 데이터를 포스팅함수의 매개변수로 전달한다.
-
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -105,7 +105,6 @@ form.addEventListener("submit", (event) => {
 });
 
 // feed :: posting 함수
-
 let feedItems = [];
 let id = 0;
 
@@ -141,6 +140,24 @@ const posting = (data) => {
     content: data.content,
     date: data.date,
   });
-  console.log(feedItems);
-  // sotrage update
+  storageUpdate();
 };
+
+// Local Storage ::
+const storageUpdate = () => {
+  localStorage.setItem(POST_LS, JSON.stringify(feedItems));
+};
+
+const loadFeedItems = () => {
+  const feedData = localStorage.getItem(POST_LS);
+  if (feedData !== null) {
+    const feeds = JSON.parse(feedData);
+    feeds.forEach((feed) => {
+      posting(feed);
+    });
+    id = feeds.length;
+    feedItems = feeds;
+  }
+};
+
+loadFeedItems();
