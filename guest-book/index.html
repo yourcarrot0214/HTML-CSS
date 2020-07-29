@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- script -->
+    <script src="main.js" defer></script>
+    <title>Guest Book</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="profile">
+        <div class="profile-header">
+          <div class="profile-header-image">
+            <img src="./images/IMG_4013.JPG" alt="header-image" />
+          </div>
+          <div class="profile-name">ByungHoon Jeong</div>
+          <div class="profile-subtitle">Jobless</div>
+        </div>
+        <div class="profile-info">
+          <div class="posts">
+            <p class="number">753</p>
+            <p class="subtitle">Posts</p>
+          </div>
+          <div class="following">
+            <p class="number">1,536</p>
+            <p class="subtitle">Following</p>
+          </div>
+          <div class="followers">
+            <p class="number">899</p>
+            <p class="subtitle">Followers</p>
+          </div>
+        </div>
+        <div class="profile-description">
+          <p>
+            개인사업 2년 10개월(온라인 유통) / 건설현장 소방배관사 2년 / 이후 웹
+            개발자로 전직하기 위해 개발 공부중입니다. JS기반 풀스택 개발자를
+            1차적 목표로 하고 있으며 이후 변화와 확장에 열려있는 사람이 되고
+            싶습니다.
+          </p>
+        </div>
+        <div class="profile-footer">
+          <button class="profile-follow-button">Follow</button>
+        </div>
+      </div>
+      <div class="form-feed">
+        <div class="form-header">
+          Posting
+        </div>
+        <form action="post.json" method="POST">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form-name"
+            maxlength="10"
+          />
+          <label for="content">Content</label>
+          <textarea
+            name="content"
+            id="content"
+            cols="30"
+            rows="10"
+            class="form-textarea"
+          ></textarea>
+          <button>Send</button>
+        </form>
+      </div>
+      <div class="feed">
+        <div class="feed-header">
+          Posts
+        </div>
+        <div class="feed-card">
+          <div class="profile-image">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="feed-content">
+            <div class="card-header">
+              <div class="card-header-title">Type something</div>
+              <div class="card-header-time">a few seconds ago</div>
+            </div>
+            <div class="card-body">
+              <div class="card-body-content">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
+                dolorum ullam natus minima consectetur, exercitationem repellat
+                unde tempora, totam rem cumque qui id eum autem sapiente quos,
+                molestiae at ex.
+              </div>
+            </div>
+            <div class="card-footer">
+              <span class="card-footer-reply">Reply</span>
+              <span class="card-footer-like">Like</span>
+            </div>
+          </div>
+        </div>
+        <!-- end of feed -->
+
+        <!-- reply -->
+        <!-- <div class="reply">
+          <div class="reply-icon">
+            <i class="fab fa-replyd"></i>
+          </div>
+          <div class="reply-card">
+            <div class="reply-content">
+              <div class="reply-header">
+                <div class="reply-header-title">The Wilted Carrot Field</div>
+                <div class="reply-header-time">a few seconds ago</div>
+              </div>
+              <div class="reply-body">
+                <div class="reply-body-content">
+                  The Carrot Field is wilted.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- end of reply -->
+      </div>
+      <!-- Following -->
+      <div class="following-feed">
+        <div class="following-feed-header">
+          <div class="following-feed-header-title">Following</div>
+        </div>
+        <div class="following-feed-body"></div>
+        <div class="following-feed-card">
+          <div class="following-feed-card-image">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="following-feed-card-body">
+            <div class="following-feed-card-title">Carrot</div>
+            <div class="following-feed-card-desc">
+              Carrot a.k.a 당근같은사람
+            </div>
+          </div>
+        </div>
+        <div class="following-feed-card">
+          <div class="following-feed-card-image">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="following-feed-card-body">
+            <div class="following-feed-card-title">Left Wing</div>
+            <div class="following-feed-card-desc">
+              영의정의 반쪽 날개
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Followers -->
+      <div class="followers-feed">
+        <div class="followers-feed-header">
+          <div class="followers-feed-header-title">Followers</div>
+        </div>
+        <div class="followers-feed-body"></div>
+        <div class="followers-feed-card">
+          <div class="followers-feed-card-image">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="followers-feed-card-body">
+            <div class="followers-feed-card-title">당근같은사람</div>
+            <div class="followers-feed-card-desc">
+              Do you like Carrot?
+            </div>
+          </div>
+        </div>
+        <div class="followers-feed-card">
+          <div class="followers-feed-card-image">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="followers-feed-card-body">
+            <div class="followers-feed-card-title">좌의정</div>
+            <div class="followers-feed-card-desc">
+              부러진 왼쪽날개
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- form -->
+    </div>
+  </body>
+</html>
