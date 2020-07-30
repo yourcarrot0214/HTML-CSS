@@ -486,16 +486,4 @@ body {
     min-width: 390px;
     width: 390px;
   }
-
-  .following-feed {
-    display: none;
-  }
-
-  .followers-feed {
-    display: none;
-  }
-
-  .form-feed {
-    display: none;
-  }
 }

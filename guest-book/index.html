@@ -57,113 +57,114 @@
           <button class="profile-follow-button">Follow</button>
         </div>
       </div>
-      <div class="form-feed">
-        <div class="form-header">
-          Posting
+      <div class="feed-container">
+        <div class="form-feed">
+          <div class="form-header">
+            Posting
+          </div>
+          <form action="post.json" method="POST">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-name"
+              maxlength="10"
+            />
+            <label for="content">Content</label>
+            <textarea
+              name="content"
+              id="content"
+              cols="30"
+              rows="10"
+              class="form-textarea"
+            ></textarea>
+            <button>Send</button>
+          </form>
         </div>
-        <form action="post.json" method="POST">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            class="form-name"
-            maxlength="10"
-          />
-          <label for="content">Content</label>
-          <textarea
-            name="content"
-            id="content"
-            cols="30"
-            rows="10"
-            class="form-textarea"
-          ></textarea>
-          <button>Send</button>
-        </form>
-      </div>
-      <div class="feed">
-        <!-- end of feed -->
+        <div class="feed">
+          <!-- end of feed -->
 
-        <!-- reply -->
-        <!-- <div class="reply">
-          <div class="reply-icon">
-            <i class="fab fa-replyd"></i>
+          <!-- reply -->
+          <!-- <div class="reply">
+      <div class="reply-icon">
+        <i class="fab fa-replyd"></i>
+      </div>
+      <div class="reply-card">
+        <div class="reply-content">
+          <div class="reply-header">
+            <div class="reply-header-title">The Wilted Carrot Field</div>
+            <div class="reply-header-time">a few seconds ago</div>
           </div>
-          <div class="reply-card">
-            <div class="reply-content">
-              <div class="reply-header">
-                <div class="reply-header-title">The Wilted Carrot Field</div>
-                <div class="reply-header-time">a few seconds ago</div>
+          <div class="reply-body">
+            <div class="reply-body-content">
+              The Carrot Field is wilted.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+          <!-- end of reply -->
+        </div>
+        <!-- Following -->
+        <div class="following-feed">
+          <div class="following-feed-header">
+            <div class="following-feed-header-title">Following</div>
+          </div>
+          <div class="following-feed-body"></div>
+          <div class="following-feed-card">
+            <div class="following-feed-card-image">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="following-feed-card-body">
+              <div class="following-feed-card-title">Carrot</div>
+              <div class="following-feed-card-desc">
+                Carrot a.k.a 당근같은사람
               </div>
-              <div class="reply-body">
-                <div class="reply-body-content">
-                  The Carrot Field is wilted.
-                </div>
+            </div>
+          </div>
+          <div class="following-feed-card">
+            <div class="following-feed-card-image">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="following-feed-card-body">
+              <div class="following-feed-card-title">Left Wing</div>
+              <div class="following-feed-card-desc">
+                영의정의 반쪽 날개
               </div>
             </div>
           </div>
-        </div> -->
-        <!-- end of reply -->
-      </div>
-      <!-- Following -->
-      <div class="following-feed">
-        <div class="following-feed-header">
-          <div class="following-feed-header-title">Following</div>
         </div>
-        <div class="following-feed-body"></div>
-        <div class="following-feed-card">
-          <div class="following-feed-card-image">
-            <i class="fas fa-user"></i>
+        <!-- Followers -->
+        <div class="followers-feed">
+          <div class="followers-feed-header">
+            <div class="followers-feed-header-title">Followers</div>
           </div>
-          <div class="following-feed-card-body">
-            <div class="following-feed-card-title">Carrot</div>
-            <div class="following-feed-card-desc">
-              Carrot a.k.a 당근같은사람
+          <div class="followers-feed-body"></div>
+          <div class="followers-feed-card">
+            <div class="followers-feed-card-image">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="followers-feed-card-body">
+              <div class="followers-feed-card-title">당근같은사람</div>
+              <div class="followers-feed-card-desc">
+                Do you like Carrot?
+              </div>
             </div>
           </div>
-        </div>
-        <div class="following-feed-card">
-          <div class="following-feed-card-image">
-            <i class="fas fa-user"></i>
-          </div>
-          <div class="following-feed-card-body">
-            <div class="following-feed-card-title">Left Wing</div>
-            <div class="following-feed-card-desc">
-              영의정의 반쪽 날개
+          <div class="followers-feed-card">
+            <div class="followers-feed-card-image">
+              <i class="fas fa-user"></i>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- Followers -->
-      <div class="followers-feed">
-        <div class="followers-feed-header">
-          <div class="followers-feed-header-title">Followers</div>
-        </div>
-        <div class="followers-feed-body"></div>
-        <div class="followers-feed-card">
-          <div class="followers-feed-card-image">
-            <i class="fas fa-user"></i>
-          </div>
-          <div class="followers-feed-card-body">
-            <div class="followers-feed-card-title">당근같은사람</div>
-            <div class="followers-feed-card-desc">
-              Do you like Carrot?
-            </div>
-          </div>
-        </div>
-        <div class="followers-feed-card">
-          <div class="followers-feed-card-image">
-            <i class="fas fa-user"></i>
-          </div>
-          <div class="followers-feed-card-body">
-            <div class="followers-feed-card-title">좌의정</div>
-            <div class="followers-feed-card-desc">
-              부러진 왼쪽날개
+            <div class="followers-feed-card-body">
+              <div class="followers-feed-card-title">좌의정</div>
+              <div class="followers-feed-card-desc">
+                부러진 왼쪽날개
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- form -->
     </div>
   </body>
 </html>
