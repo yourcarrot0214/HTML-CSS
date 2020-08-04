@@ -468,9 +468,6 @@ body {
 }
 
 @media (min-width: 1024px) {
-  body {
-    /* position: static; */
-  }
   .main-container {
     display: flex;
     flex-direction: row;

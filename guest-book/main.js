@@ -1,4 +1,4 @@
-const profileInfo = document.querySelector(".profile-info");
+const profileHeader = document.querySelector(".profile-header");
 const posts = document.querySelector(".posts");
 const following = document.querySelector(".following");
 const followers = document.querySelector(".followers");
@@ -56,25 +56,32 @@ const removeFeedItem = (event) => {
 
 // feed :: display none
 
-profileInfo.addEventListener("click", (event) => {
-  console.log(event.target);
+profileHeader.addEventListener("click", (e) => {
+  formFeed.style.display = "flex";
+  feed.style.display = "flex";
+  followingFeed.style.display = "flex";
+  followersFeed.style.display = "flex";
+});
 
-  if (event.target === posts) {
-    feed.style.display = "flex";
-    formFeed.style.display = "flex";
-    followingFeed.style.display = "none";
-    followersFeed.style.display = "none";
-  } else if (event.target === following) {
-    feed.style.display = "none";
-    formFeed.style.display = "none";
-    followingFeed.style.display = "flex";
-    followersFeed.style.display = "none";
-  } else if (event.target === followers) {
-    feed.style.display = "none";
-    formFeed.style.display = "none";
-    followingFeed.style.display = "none";
-    followersFeed.style.display = "flex";
-  }
+posts.addEventListener("click", (e) => {
+  formFeed.style.display = "flex";
+  feed.style.display = "flex";
+  followingFeed.style.display = "none";
+  followersFeed.style.display = "none";
+});
+
+following.addEventListener("click", (e) => {
+  formFeed.style.display = "none";
+  feed.style.display = "none";
+  followingFeed.style.display = "flex";
+  followersFeed.style.display = "none";
+});
+
+followers.addEventListener("click", (e) => {
+  formFeed.style.display = "none";
+  feed.style.display = "none";
+  followingFeed.style.display = "none";
+  followersFeed.style.display = "flex";
 });
 
 // form :: submit logic
