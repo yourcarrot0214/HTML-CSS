@@ -45,9 +45,10 @@ body {
 
 .profile-name {
   color: orangered;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
   padding: 10px 0;
+  text-align: center;
 }
 
 .profile-subtitle {
